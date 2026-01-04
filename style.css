@@ -11,6 +11,7 @@ nav {
   align-items: center;
   padding: 20px 40px;
   background: #ffe4e1;
+  position: relative;
 }
 
 nav .logo {
@@ -19,20 +20,59 @@ nav .logo {
   color: #ff6f91;
 }
 
-nav ul {
+.nav-links {
   display: flex;
   gap: 25px;
   margin: 0;
   padding: 0;
-}
-
-nav ul li {
   list-style: none;
 }
 
-nav ul li a {
+.nav-links li a {
   text-decoration: none;
   color: #333;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+#burger-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: #ffe4e1;
+    width: 200px;
+    display: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  #burger-toggle:checked + .burger + .nav-links {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
 }
 
 .hero {
@@ -193,13 +233,6 @@ footer {
   text-align: center;
   padding: 20px;
   background: #ffe4e1;
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
 @keyframes fadeIn {
