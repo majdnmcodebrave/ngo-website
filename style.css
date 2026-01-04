@@ -43,89 +43,6 @@ nav .logo {
 }
 
 .burger {
-  display: none; /* show only on mobile */
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.burger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-  .burger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    flex-direction: column;
-    background: #ffe4e1;
-    width: 200px;
-    display: none;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  }
-
- #burger-toggle {
-  display: none;
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.burger {
-  display: none; /* show only on mobile */
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.burger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-  .burger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    flex-direction: column;
-    background: #ffe4e1;
-    width: 200px;
-    display: none;
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  }
-
-  #burger-toggle {
-  display: none;
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
-
-
-
-.burger {
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -299,6 +216,11 @@ section h2 {
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #ccc;
+}
+
+.contact textarea {
+  resize: none;
+  overflow: auto;
 }
 
 .contact button {
