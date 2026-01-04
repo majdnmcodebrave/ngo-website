@@ -31,7 +31,99 @@ nav .logo {
 .nav-links li a {
   text-decoration: none;
   color: #333;
+  padding: 5px 0;
+  display: block;
 }
+
+#burger-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.burger {
+  display: none; /* show only on mobile */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: #ffe4e1;
+    width: 200px;
+    display: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+ #burger-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.burger {
+  display: none; /* show only on mobile */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: #ffe4e1;
+    width: 200px;
+    display: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  #burger-toggle {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
 
 .burger {
   display: none;
@@ -48,11 +140,11 @@ nav .logo {
   border-radius: 2px;
 }
 
-#burger-toggle {
-  display: none;
-}
-
 @media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
   .nav-links {
     position: absolute;
     top: 70px;
@@ -67,10 +159,6 @@ nav .logo {
   }
 
   #burger-toggle:checked + .burger + .nav-links {
-    display: flex;
-  }
-
-  .burger {
     display: flex;
   }
 }
@@ -149,7 +237,6 @@ section h2 {
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
-  display: block;
 }
 
 .cause-card:hover {
